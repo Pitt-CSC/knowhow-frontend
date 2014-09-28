@@ -12,5 +12,6 @@ Router.map ->
     @route 'show', path: ':id'
   @resource 'articles', ->
     @route 'show', path: ':id'
+  @route 'categories/show'
 
 `export default Router`
