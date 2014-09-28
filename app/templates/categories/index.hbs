@@ -1,0 +1,13 @@
+{{input value=titleFilter placeholder="Filter Categories"}}
+
+<ul class="small-block-grid-3">
+  {{#each category in filteredContent}}
+    {{#link-to 'categories.show' category tagName='li'}}
+      <div class="tile">
+        <img alt='bill murray' src="http://fillmurray.com/300/200">
+        {{category.title}}
+      </div>
+    {{/link-to}}
+  {{/each}}
+</ul>
+

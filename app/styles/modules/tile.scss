@@ -1,0 +1,23 @@
+@import '../vars';
+
+.tile {
+  background-color: white;
+  box-shadow: 1px 1px 1px 0px black;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+  }
+
+  // &:nth-child(n+3) {
+  //   margin-right: 10px;
+  // }
+
+  // &:nth-child(2n+3) {
+  //   margin-right: 10px;
+  // }
+
+}

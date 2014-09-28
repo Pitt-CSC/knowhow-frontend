@@ -7,6 +7,10 @@ Router = Ember.Router.extend
 Router.map ->
   @route 'index', path: '/'
   @resource 'categories', ->
-    @route 'category', path: ':id'
+    @route 'show', path: ':id'
+  @resource 'collections', ->
+    @route 'show', path: ':id'
+  @resource 'articles', ->
+    @route 'show', path: ':id'
 
 `export default Router`
