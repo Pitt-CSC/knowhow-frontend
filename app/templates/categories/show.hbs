@@ -5,4 +5,19 @@
 
 <h1>{{title}}</h1>
 
+{{#if collections}}
+<hr />
+<h2>Collections</h2>
+
+<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+  {{#each collection in collections}}
+    {{block-grid-tile model=collection
+                      isExpandable=true
+                      clickAction='openCollection'}}
+  {{/each}}
+</ul>
+{{/if}}
+
+<hr />
+
 <button class='alert' {{action 'destroy'}}>Delete</button>

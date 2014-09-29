@@ -1,4 +1,13 @@
-{{input value=titleFilter placeholder="Filter Categories"}}
+<div class="row">
+  <div class="small-12 medium-10 columns">
+    {{input value=titleFilter placeholder="Filter Categories"}}
+  </div>
+  <div class="small-12 medium-2 columns">
+    {{#link-to 'categories.new' classNames='button small'}}
+      Add Category
+    {{/link-to}}
+  </div>
+</div>
 
 <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
   {{#each category in filteredContent}}

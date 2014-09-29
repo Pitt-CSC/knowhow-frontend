@@ -9,4 +9,7 @@ CategoriesShowController = Ember.ObjectController.extend
         @get('model').destroyRecord().then ->
           controller.transitionToRoute 'categories.index'
 
+    openCollection: (collection)->
+      @transitionToRoute 'collections.show', collection
+
 `export default CategoriesShowController`
