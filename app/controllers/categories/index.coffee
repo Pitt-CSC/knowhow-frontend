@@ -22,4 +22,10 @@ CategoriesIndexController = Ember.ArrayController.extend
       return item.get('title').toLowerCase().indexOf(filter.toLowerCase()) > -1
 
   ).property 'titleFilter', 'arrangedContent'
+
+
+  actions:
+    open: (category)->
+      @transitionToRoute 'categories.show', category
+
 `export default CategoriesIndexController`

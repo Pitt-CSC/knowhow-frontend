@@ -12,15 +12,28 @@
       <li class="has-dropdown">
         <a href="#">Login</a>
         <ul class="dropdown">
-          <li><a href="#">First link in dropdown</a></li>
+          <li class="has-dropdown">
+            <a>Create New...</a>
+            <ul class="dropdown">
+              <li>{{#link-to 'categories.new'}}Category{{/link-to}}</li>
+              <li>{{#link-to 'collections.new'}}Collection{{/link-to}}</li>
+            </ul>
+          </li>
         </ul>
       </li>
     </ul>
 
     <ul class="left">
-      <li>{{#link-to 'categories'}}Categories{{/link-to}}</li>
-      <li>{{#link-to 'collections'}}Collections{{/link-to}}</li>
-      <li>{{#link-to 'articles'}}Articles{{/link-to}}</li>
+      {{!--
+        These links probably look a little weird, but that's OK. By making the
+        <li> the clickable part of the nav bar item and putting a blank <a> tag
+        around the label, we maintain Foundation's structure requirements while
+        benefitting from the way that Ember automatically adds the class
+        "active" to any link that goes to the current page.
+      --}}
+      {{#link-to 'categories' tagName='li' }}<a>Categories</a>{{/link-to}}
+      {{#link-to 'collections' tagName='li'}}<a>Collections</a>{{/link-to}}
+      {{#link-to 'articles' tagName='li'   }}<a>Articles</a>{{/link-to}}
     </ul>
   </section>
 </nav>

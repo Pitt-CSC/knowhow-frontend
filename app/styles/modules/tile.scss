@@ -1,23 +1,26 @@
 @import '../vars';
 
 .tile {
-  background-color: white;
-  box-shadow: 1px 1px 1px 0px black;
-  box-sizing: border-box;
-  text-align: center;
-  font-weight: bold;
-  cursor: pointer;
+  .tile-inner {
+    background-color: white;
+    box-shadow: 1px 1px 1px 0px black;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+    // float: left;
 
-  img {
-    width: 100%;
+    img {
+      width: 100%;
+    }
   }
 
-  // &:nth-child(n+3) {
-  //   margin-right: 10px;
-  // }
+  &.expanded {
+    width: 66.666666666%;
 
-  // &:nth-child(2n+3) {
-  //   margin-right: 10px;
-  // }
-
+    .tile-inner {
+      width: calc(50% - 0.625rem);
+    }
+  }
 }

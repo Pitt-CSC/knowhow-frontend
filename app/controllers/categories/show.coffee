@@ -1,0 +1,12 @@
+`import Ember from 'ember'`
+
+CategoriesShowController = Ember.ObjectController.extend
+
+  actions:
+    destroy: ->
+      if confirm("Are you sure you want to destroy this category?")
+        controller = this
+        @get('model').destroyRecord().then ->
+          controller.transitionToRoute 'categories.index'
+
+`export default CategoriesShowController`
