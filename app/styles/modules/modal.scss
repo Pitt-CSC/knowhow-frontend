@@ -2,7 +2,6 @@
  * Modal and Modal Background
  */
 
-@import '../vars';
 @import '../helpers';
 
 .modal-background {
@@ -30,6 +29,6 @@
   text-align: left;
   width: 80%;
   height: 80%;
-  background: white;
+  background: $white;
 }
 
