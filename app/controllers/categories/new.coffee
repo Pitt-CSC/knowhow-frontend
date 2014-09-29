@@ -11,6 +11,7 @@ CategoriesNewController = Ember.Controller.extend
         title: title
       category.save()
       .then =>
+        @categoryTitle = null
         @transitionToRoute 'categories.show', category
       , (error)->
         console.error error

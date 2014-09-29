@@ -12,4 +12,7 @@ CategoriesShowController = Ember.ObjectController.extend
     openCollection: (collection)->
       @transitionToRoute 'collections.show', collection
 
+    addCollection: ->
+      @send('openModal', 'addCollection')
+
 `export default CategoriesShowController`

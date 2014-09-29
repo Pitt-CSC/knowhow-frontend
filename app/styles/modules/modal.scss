@@ -1,0 +1,35 @@
+/*
+ * Modal and Modal Background
+ */
+
+@import '../vars';
+@import '../helpers';
+
+.modal-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .3);
+  display: inline-block;
+  text-align: center;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+.modal {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  width: 80%;
+  height: 80%;
+  background: white;
+}
+
